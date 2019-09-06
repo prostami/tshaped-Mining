@@ -15,7 +15,7 @@ In order to identify skill areas, we went through three steps:
 2. Secondly, we employed agglomerative clustering (average linkage) algorithm to obtain an initial clustering of tags. To set up
 this algorithm, the similarity between each pair of tags (t<sub>1</sub> and t<sub>2</sub>) is calculated using Jaccard Coefficient as follows:
 
-   <img src="http://www.sciweavers.org/tex2img.php?eq=Similarity%28t_%7B1%7D%2C%20t_%7B2%7D%29%20%3D%20%20%5Cfrac%7B%7CQ_%7Bt_%7B1%7D%7D%20%5Cbigcap%20Q_%7Bt_%7B2%7D%7D%7C%7D%7B%7CQ_%7Bt_%7B1%7D%7D%20%20%5Cbigcup%20Q_%7Bt_%7B2%7D%7D%7C%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="Similarity(t_{1}, t_{2}) =  \frac{|Q_{t_{1}} \bigcap Q_{t_{2}}|}{|Q_{t_{1}}  \bigcup Q_{t_{2}}|} " width="220" height="49" />
+   <img src="http://www.sciweavers.org/tex2img.php?eq=Similarity%28t_%7B1%7D%2C%20t_%7B2%7D%29%20%3D%20%20%5Cfrac%7B%7CQ_%7Bt_%7B1%7D%7D%20%5Cbigcap%20Q_%7Bt_%7B2%7D%7D%7C%7D%7B%7CQ_%7Bt_%7B1%7D%7D%20%20%5Cbigcup%20Q_%7Bt_%7B2%7D%7D%7C%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="Similarity(t_{1}, t_{2}) =  \frac{|Q_{t_{1}} \bigcap Q_{t_{2}}|}{|Q_{t_{1}}  \bigcup Q_{t_{2}}|} " width="249" height="49" />
 
    where Q<sub>t</sub> is the set of questions containing tag t.
 
@@ -117,7 +117,7 @@ three different levels including **beginner**, **intermediate**, and **advanced*
 
 To combine these two measures, we have utilized Harmonic mean as follows:
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=HM%20%3D%20%5Cfrac%7B%202%20%2A%20Recall%20%2A%20Precision%20%7D%7B%20Recall%20%2B%20Precision%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="HM = \frac{ 2 * Recall * Precision }{ Recall + Precision}" width="222" height="44" />
+<img src="http://www.sciweavers.org/tex2img.php?eq=HM%20%3D%20%5Cfrac%7B%202%20%2A%20Recall%20%2A%20Precision%20%7D%7B%20Recall%20%2B%20Precision%20%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="HM = \frac{ 2 * Recall * Precision }{ Recall + Precision }" width="240" height="44" />
 
 Users of each skill area are sorted in descending order according to their harmonic mean value and then top 5% of the ranking is marked as users who hold advanced knowledge, the next 20% possess intermediate knowledge, and the rest have beginner knowledge on the corresponding skill area. To put it another way, we have considered top 25% intermediated or advanced users and the rest as beginners.
 
