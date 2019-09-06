@@ -14,9 +14,9 @@ In order to identify skill areas, we went through three steps:
 1. Firstly, we extracted top-200 frequent tags from each collection.
 2. Secondly, we employed agglomerative clustering (average linkage) algorithm to obtain an initial clustering of tags. To set up
 this algorithm, the similarity between each pair of tags (t<sub>1</sub> and t<sub>2</sub>) is calculated using Jaccard Coefficient as follows:
-
-   <img src="http://www.sciweavers.org/tex2img.php?eq=Similarity%28t_%7B1%7D%2C%20t_%7B2%7D%29%20%3D%20%20%5Cfrac%7B%7CQ_%7Bt_%7B1%7D%7D%20%5Cbigcap%20Q_%7Bt_%7B2%7D%7D%7C%7D%7B%7CQ_%7Bt_%7B1%7D%7D%20%20%5Cbigcup%20Q_%7Bt_%7B2%7D%7D%7C%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="Similarity(t_{1}, t_{2}) =  \frac{|Q_{t_{1}} \bigcap Q_{t_{2}}|}{|Q_{t_{1}}  \bigcup Q_{t_{2}}|} " width="249" height="49" />
-
+   
+   <a href="https://www.codecogs.com/eqnedit.php?latex=Similarity(t_{1},&space;t_{2})&space;=&space;\frac{|Q_{t_{1}}&space;\bigcap&space;Q_{t_{2}}|}{|Q_{t_{1}}&space;\bigcup&space;Q_{t_{2}}|}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Similarity(t_{1},&space;t_{2})&space;=&space;\frac{|Q_{t_{1}}&space;\bigcap&space;Q_{t_{2}}|}{|Q_{t_{1}}&space;\bigcup&space;Q_{t_{2}}|}" title="Similarity(t_{1}, t_{2}) = \frac{|Q_{t_{1}} \bigcap Q_{t_{2}}|}{|Q_{t_{1}} \bigcup Q_{t_{2}}|}" /></a>
+   
    where Q<sub>t</sub> is the set of questions containing tag t.
 
 3. Finally, in order to have a more precise clustering, we asked a group of recruiters to revise the initial clustering according to the most demanding skill areas they are interested in hiring.
@@ -117,7 +117,7 @@ three different levels including **beginner**, **intermediate**, and **advanced*
 
 To combine these two measures, we have utilized Harmonic mean as follows:
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=HM%20%3D%20%5Cfrac%7B%202%20%2A%20Recall%20%2A%20Precision%20%7D%7B%20Recall%20%2B%20Precision%20%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="HM = \frac{ 2 * Recall * Precision }{ Recall + Precision }" width="240" height="44" />
+<a href="https://www.codecogs.com/eqnedit.php?latex=HM&space;=&space;\frac{&space;2&space;*&space;Recall&space;*&space;Precision&space;}{&space;Recall&space;&plus;&space;Precision&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?HM&space;=&space;\frac{&space;2&space;*&space;Recall&space;*&space;Precision&space;}{&space;Recall&space;&plus;&space;Precision&space;}" title="HM = \frac{ 2 * Recall * Precision }{ Recall + Precision }" /></a>
 
 Users of each skill area are sorted in descending order according to their harmonic mean value and then top 5% of the ranking is marked as users who hold advanced knowledge, the next 20% possess intermediate knowledge, and the rest have beginner knowledge on the corresponding skill area. To put it another way, we have considered top 25% intermediated or advanced users and the rest as beginners.
 
